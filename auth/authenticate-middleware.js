@@ -20,7 +20,7 @@ module.exports = (req, res, next) => {
   
   jwt.verify(token[1], "sssshhhhhhhH!!", (error, newToken) => {
       if (error) {
-        res.status(401).json({message: 'error verifying token', error: error.message});
+        return res.status(401).json({message: 'error verifying token', error: error.message});
       } else {
           
         req.token = newToken;
