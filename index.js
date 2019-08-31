@@ -1,4 +1,7 @@
 const server = require('./api/server.js');
+const authRouter = require('./auth/auth-router.js');
+
+server.use(authRouter)
 
 const PORT = process.env.PORT || 3300;
 server.listen(PORT, () => {
