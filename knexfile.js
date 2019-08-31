@@ -9,4 +9,15 @@ module.exports = {
     },
     seeds: { directory: './database/seeds' },
   },
+  "jest": {
+    "testEnvirnoment": "node"
+  },
+  test: "jest --watch --verbose",
+  testing: {
+    client: 'sqlite3',
+    connection: {
+      filename: './database/authTest.db3',
+    },
+    useNullAsDefault: true,
+  }
 };
